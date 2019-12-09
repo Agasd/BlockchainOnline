@@ -8,7 +8,6 @@ namespace BlockchainOnline.Models
 
     public class User
     {
-        public int UserID { get; set; }
         [DisplayName("User Name")]
         [Required(ErrorMessage = "This field is required.")]
         public string UserName { get; set; }

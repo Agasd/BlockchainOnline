@@ -21,10 +21,11 @@ namespace BlockchainOnline.Controllers
 
         public IActionResult Index()
         {
-            if(HttpContext.Session.GetString("username") != null)
+            if(HttpContext.Session.GetString("token") != null)
             {
                 HomeViewModel hvm = new HomeViewModel();
-                hvm.UserName = HttpContext.Session.GetString("username");
+                hvm.userInfo = UserController.getUserInfoByToken(HttpContext.Session.GetString("token"));
+                hvm.token = HttpContext.Session.GetString("token");
                 //return RedirectToAction("Index", "Login");
                 return View(hvm);
             }

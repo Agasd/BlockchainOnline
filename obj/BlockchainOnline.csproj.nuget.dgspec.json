@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Balazs\\source\\repos\\BlockchainOnline\\BlockchainOnline.csproj": {}
+    "C:\\Users\\Winfos\\Documents\\work\\BlockchainOnline\\BlockchainOnline.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Balazs\\source\\repos\\BlockchainOnline\\BlockchainOnline.csproj": {
+    "C:\\Users\\Winfos\\Documents\\work\\BlockchainOnline\\BlockchainOnline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Balazs\\source\\repos\\BlockchainOnline\\BlockchainOnline.csproj",
+        "projectUniqueName": "C:\\Users\\Winfos\\Documents\\work\\BlockchainOnline\\BlockchainOnline.csproj",
         "projectName": "BlockchainOnline",
-        "projectPath": "C:\\Users\\Balazs\\source\\repos\\BlockchainOnline\\BlockchainOnline.csproj",
-        "packagesPath": "C:\\Users\\Balazs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Balazs\\source\\repos\\BlockchainOnline\\obj\\",
+        "projectPath": "C:\\Users\\Winfos\\Documents\\work\\BlockchainOnline\\BlockchainOnline.csproj",
+        "packagesPath": "C:\\Users\\Winfos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Winfos\\Documents\\work\\BlockchainOnline\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Balazs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Winfos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,6 +55,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Nancy": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [

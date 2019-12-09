@@ -7,6 +7,7 @@ namespace BlockchainOnline.Models
 {
     public class HomeViewModel
     {
-        public string UserName;
+        public UserInfo userInfo;
+        public string token;
     }
 }
