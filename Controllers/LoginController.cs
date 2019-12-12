@@ -13,6 +13,7 @@ using BlockchainOnline.DTOs;
 using Newtonsoft.Json;
 using BlockchainOnline;
 using System.Text;
+using BlockchainOnline.Controllers;
 
 namespace MVCLogin.Controllers
 {
@@ -59,9 +60,11 @@ namespace MVCLogin.Controllers
             if(response.StatusCode.ToString() == "OK")
             {
                 TokenDTO token = JsonConvert.DeserializeObject<TokenDTO>(responseBody);
-
-                HttpContext.Session.SetString("username", userModel.UserName);
                 HttpContext.Session.SetString("token", token.tokenString);
+
+                var userInfoJson = new JavaScriptSerializer().Serialize(UserController.getUserInfoByToken(token.tokenString));
+
+                HttpContext.Session.SetString("userInfo", userInfoJson);
 
                 return RedirectToAction("Index", "Home");
             }
@@ -73,6 +76,7 @@ namespace MVCLogin.Controllers
         public ActionResult Logout()
         {
             HttpContext.Session.Remove("token");
+            HttpContext.Session.Remove("userInfo");
             return RedirectToAction("Index", "Login");
         }
         private string sendLoginRequest(User userModel)

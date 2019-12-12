@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BlockchainOnline.Models;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace BlockchainOnline.Controllers
 {
@@ -24,7 +25,8 @@ namespace BlockchainOnline.Controllers
             if(HttpContext.Session.GetString("token") != null)
             {
                 HomeViewModel hvm = new HomeViewModel();
-                hvm.userInfo = UserController.getUserInfoByToken(HttpContext.Session.GetString("token"));
+                hvm.userInfo = JsonConvert.DeserializeObject<UserInfo>(HttpContext.Session.GetString("userInfo"));
+                //hvm.userInfo = UserController.getUserInfoByToken(HttpContext.Session.GetString("token"));
                 hvm.token = HttpContext.Session.GetString("token");
                 //return RedirectToAction("Index", "Login");
                 return View(hvm);

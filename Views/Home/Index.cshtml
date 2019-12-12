@@ -5,6 +5,15 @@
 
     <div class="text-center">
         <h2>Hello @Model.userInfo.Username</h2>
-        
+        <div class="container-fluid">
+            <div class="col-lg-4">
 
+            </div>
+            <div class="col-lg-8">
+                @Html.DropDownList(
+                    "wallet",
+                    Model.userInfo.Wallets.Select(x => new SelectListItem { Text = x.Public_key, Value = x.Public_key }),
+                    "Choose a wallet")
+            </div>
+        </div>
     </div>
