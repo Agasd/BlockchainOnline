@@ -1,19 +1,32 @@
 ﻿@model BlockchainOnline.Models.HomeViewModel
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Wallet Page";
 }
-
+    
     <div class="text-center">
         <h2>Hello @Model.userInfo.Username</h2>
-        <div class="container-fluid">
-            <div class="col-lg-4">
-
-            </div>
-            <div class="col-lg-8">
-                @Html.DropDownList(
-                    "wallet",
-                    Model.userInfo.Wallets.Select(x => new SelectListItem { Text = x.Public_key, Value = x.Public_key }),
-                    "Choose a wallet")
+        <div class="container-fluid content_container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h3>
+                        Wallets:
+                    </h3>
+                    @Html.DropDownList(
+                        "walletSelect",
+                        Model.userInfo.Wallets.Select(x => new SelectListItem { Text = x.Public_key, Value = x.Public_key }),
+                        "Choose a wallet")
+                </div>
+                <div class="col-md-7">
+                    <ul id="walletDataList" class="list-group list-group-flush">
+                        <li id="listWalletPublicKey" class="list-group-item">Public key:</li>
+                        <li id="listWalletBalance" class="list-group-item">Balance:</li>
+                        <li id="listWalletPrivateKey" class="list-group-item-danger list-group-item">Private key:</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+<script>
+    localStorage.setItem("userInfo", '@Json.Serialize(Model.userInfo)');
+    localStorage.setItem("token",'@Json.Serialize(Model.token)');
+</script>
