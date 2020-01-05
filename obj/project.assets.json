@@ -8589,19 +8589,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Winfos\\.nuget\\packages\\": {}
+    "C:\\Users\\Balazs\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Winfos\\Documents\\work\\BlockchainOnline\\BlockchainOnline.csproj",
+      "projectUniqueName": "C:\\Users\\Balazs\\source\\repos\\BlockchainOnline\\BlockchainOnline.csproj",
       "projectName": "BlockchainOnline",
-      "projectPath": "C:\\Users\\Winfos\\Documents\\work\\BlockchainOnline\\BlockchainOnline.csproj",
-      "packagesPath": "C:\\Users\\Winfos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Winfos\\Documents\\work\\BlockchainOnline\\obj\\",
+      "projectPath": "C:\\Users\\Balazs\\source\\repos\\BlockchainOnline\\BlockchainOnline.csproj",
+      "packagesPath": "C:\\Users\\Balazs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Balazs\\source\\repos\\BlockchainOnline\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Winfos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Balazs\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
