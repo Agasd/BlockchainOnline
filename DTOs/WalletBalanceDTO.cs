@@ -7,6 +7,6 @@ namespace BlockchainOnline.DTOs
 {
     public class WalletBalanceDTO
     {
-        public long balance { get; set; }
+        public string balance { get; set; }
     }
 }

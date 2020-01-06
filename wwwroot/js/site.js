@@ -23,7 +23,6 @@ $("#walletSelect").change(function () {
     })
 });
 
-
 function getWalletBalance(publicKey) {
     return axios.get('/Wallet/walletBalance/' + publicKey)
         .then((response) => {

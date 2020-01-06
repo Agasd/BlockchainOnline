@@ -1,0 +1,26 @@
+﻿@model BlockchainOnline.Models.TransactionViewModel
+
+@{
+    ViewData["Title"] = "Send ethereum";
+}
+
+<h1>Send Ethereum</h1>
+
+@using (Html.BeginForm("Send", "Transaction", FormMethod.Post))
+{<h2 class="text-center">Details:</h2>
+    <div class="form-group">
+        @Html.EditorFor(model => model.sender_key, new { htmlAttributes = new { @placeholder = "Private key", @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.EditorFor(model => model.recepient_key, new { htmlAttributes = new { @placeholder = "Recepient key", @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.EditorFor(model => model.amount, new { htmlAttributes = new { @placeholder = "WEI amount", @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block">Transfer</button>
+    </div>
+    <span>
+        @Model.result
+    </span>
+}

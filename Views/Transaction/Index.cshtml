@@ -1,0 +1,33 @@
+﻿@model BlockchainOnline.Models.TransactionViewModel
+
+@{
+    ViewData["Title"] = "Transaction";
+}
+
+<h1>Transactions</h1>
+
+<table class="table">
+    <tr>
+        <th>Sender</th>
+        <th>Receiver</th>
+        <th>Amount</th>
+        <th>Date</th>
+    </tr>
+    @foreach (var item in Model.transactions.ToArray())
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sender_username)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Recepient_username)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Ether_Amount)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.TransactionDateTime)
+    </td>
+</tr>
+    }
+</table>

@@ -22,7 +22,8 @@ namespace BlockchainOnline.Controllers
 
         public IActionResult Index()
         {
-            if(HttpContext.Session.GetString("token") != null)
+            ModelState.Clear();
+            if (HttpContext.Session.GetString("token") != null)
             {
                 HomeViewModel hvm = new HomeViewModel();
                 hvm.userInfo = JsonConvert.DeserializeObject<UserInfo>(HttpContext.Session.GetString("userInfo"));

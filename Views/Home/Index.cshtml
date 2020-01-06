@@ -23,8 +23,19 @@
                         <li id="listWalletPrivateKey" class="list-group-item-danger list-group-item">Private key:</li>
                     </ul>
                 </div>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        @using (Html.BeginForm("NewWallet", "Wallet", FormMethod.Get))
+                        {
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">New wallet</button>
+                            </div>
+                        }
+                    </div>
+                  </div>
+                </div>
             </div>
-        </div>
     </div>
 <script>
     localStorage.setItem("userInfo", '@Json.Serialize(Model.userInfo)');
